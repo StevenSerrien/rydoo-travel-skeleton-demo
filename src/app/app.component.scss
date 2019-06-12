@@ -1,0 +1,28 @@
+p {
+  font-family: Lato;
+}
+
+body {
+  margin: 0;
+}
+
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  align-items: stretch;
+
+  &__header {
+    
+  }
+
+  &__content {
+    flex-grow: 1;
+  }
+
+  &__map {
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    width: 40%;
+  }
+}
