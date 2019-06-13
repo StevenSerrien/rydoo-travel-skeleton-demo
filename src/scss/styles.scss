@@ -1,0 +1,9 @@
+/* Add application styles & imports to this file! */
+@import './settings';
+@import './typography';
+
+body {
+  margin: 0;
+  font-family: $font-family;
+  @include body;
+}

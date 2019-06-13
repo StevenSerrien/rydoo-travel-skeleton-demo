@@ -19,10 +19,11 @@ body {
 
   &__content {
     flex-grow: 1;
+    margin: 0 16px;
   }
 
   &__map {
     background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-    width: 40%;
+    width: 45%;
   }
 }

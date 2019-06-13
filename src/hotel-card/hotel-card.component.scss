@@ -1,0 +1,36 @@
+@import '../scss/styles';
+
+
+$component: '.hotel-card';
+
+#{$component} {
+  display: flex;
+  min-height: 247px;
+  box-shadow: 0px 0px 4px rgba(30, 60, 99, 0.4);
+  border-radius: 3px;
+
+  &__gallery {
+    width: 30%;
+    position: relative;
+    overflow: hidden;
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  &__content {
+    padding: 16px;
+    flex-grow: 1;
+  }
+
+  &__heading {
+    color: $neutral-darkest;
+    @include heading-3;
+    font-weight: 700;
+  }
+}

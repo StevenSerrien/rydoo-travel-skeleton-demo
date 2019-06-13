@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap');
+
+$font-family: 'Lato', sans-serif;
+
+@mixin heading-1() {
+  
+}
+@mixin heading-2() {
+
+}
+@mixin heading-3() {
+  font-size: 18px;
+  line-height: 24px;
+}
+@mixin body() {
+  font-size: 12px;
+  line-height: 16px;
+}
+@mixin body-emphasis() {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@mixin tiny() {
+  font-size: 10px;
+  line-height: 13px;
+}

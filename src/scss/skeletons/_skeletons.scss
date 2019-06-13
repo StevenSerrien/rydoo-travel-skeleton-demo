@@ -1,0 +1,60 @@
+// Skeleton Mixins
+$neutral-lightest: $sky-lighest;
+
+
+
+// Buttons
+@mixin skeleton-button-styles($button: 'button') {
+  #{$button} {
+    pointer-events: none;
+    color: $neutral-lightest;
+    line-height: 0.625rem;
+    user-select: none;
+
+    &:not(#{$button}--subtle),
+    &--subtle span {
+      background-color: $neutral-lightest;
+    }
+
+    &--subtle span {
+      border-radius: 5px;
+    }
+
+    &--icon {
+      border-radius: 50%;
+    }
+  }
+}
+
+// Text
+@mixin skeleton-text-styles() {
+  background-color: $neutral-lightest;
+  color: $neutral-lightest;
+  line-height: 1rem;
+  border-radius: 8px;
+  user-select: none;
+}
+
+@mixin skeleton-loading-layover() {
+  animation: loading 1.5s linear infinite;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.5) 49%,
+    rgba(255, 255, 255, 0.5) 55%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translateX(-100%);
+  width: 100%;
+}
+
+@keyframes loading {
+  100% {
+    transform: translateX(100%);
+  }
+}
