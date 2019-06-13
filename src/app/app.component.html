@@ -2,10 +2,26 @@
 <p>
   Start editing to see some magic happen :)
 </p> -->
-<div class="container">
-  <div class="container__content">
-    <hotel-card></hotel-card>
-  </div>
-  <div class="container__map"></div>
+<div class="heading">
 
 </div>
+<div class="container">
+  <div class="container__content">
+    <!-- Replicated list of hotels that are styled in a skeleton-manner -->
+    <div class="hotel-skeletons" *ngIf="loading">
+      <hotel-card *ngFor="let hotel of [].constructor(3)" [hotelName]="'Lorem ipsum dolor sit amet'" [address="hotel.address"></hotel-card>
+    </div>
+
+
+    <!-- List of actual hotels received from the API -->
+    <ng-container *ngIf="!loading">
+      <hotel-card *ngFor="let hotel of hotels"  [imgUrl]="hotel.imgUrl" [hotelName]="hotel.name" [rating]="hotel.rating" [address]="hotel.address"></hotel-card>
+    </ng-container>
+
+  </div>
+  <div class="container__map">
+    <button class="button" (click)="loading = !loading">Toggle loading</button>
+  </div>
+
+</div>
+

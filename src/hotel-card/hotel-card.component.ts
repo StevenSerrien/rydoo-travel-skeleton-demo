@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'hotel-card',
@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hotel-card.component.scss']
 })
 export class HotelCardComponent implements OnInit {
+  @Input() hotelName: string;
+  @Input() rating: number;
+  @Input() address: string;
+  @Input() imgUrl: string;
 
   constructor() { }
 
   ngOnInit() {
-  }
 
+  }
 }

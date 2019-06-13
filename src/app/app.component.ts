@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { savedHotelsFromAPI } from './hotels.mock'; 
 
 @Component({
   selector: 'my-app',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent  {
   name = 'Angular';
+  hotels: Array<any> = savedHotelsFromAPI;
+  loading: boolean = false;
 }

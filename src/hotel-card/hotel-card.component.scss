@@ -23,6 +23,27 @@ $component: '.hotel-card';
     }
   }
 
+  &__address {
+    display: flex;
+    margin-top: 16px;
+    align-items: center;
+    > svg {
+      width: 14px;
+      height: 18px;
+    }
+  }
+
+  &__address-text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+    @include tiny;
+
+    span + span {
+      color: $neutral;
+    }
+  }
+
   &__content {
     padding: 16px;
     flex-grow: 1;
@@ -40,5 +61,8 @@ $component: '.hotel-card';
     margin-top: auto;
     justify-content: flex-end;
     display: flex;
+    button {
+        width: 120px;
+    }
   }
 }
