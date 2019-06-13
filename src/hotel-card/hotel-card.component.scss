@@ -1,7 +1,31 @@
-@import '../scss/styles';
+@import '../scss/settings';
+@import '../scss/typography';
+@import '../scss/skeletons/skeletons';
 
 
 $component: '.hotel-card';
+
+
+/** STYLING OVERRIDES FOR SKELETON CARDS **/
+:host-context(.hotel-card-skeleton) {
+  #{$component} {
+    box-shadow: none;
+    &__heading,
+    &__stars-container {
+      ::ng-deep svg {
+        visibility: hidden;
+      }
+      @include skeleton-text-styles;
+    }
+    &__gallery {
+      padding: 13px 0 13px 11px;
+      background-color: $neutral-lightest;
+    }
+
+  }
+  @include skeleton-button-styles;
+  
+}
 
 #{$component} {
   display: flex;
@@ -33,6 +57,10 @@ $component: '.hotel-card';
     }
   }
 
+  &__stars-container {
+    margin-top: 8px;
+  }
+
   &__address-text {
     display: flex;
     flex-direction: column;
@@ -49,6 +77,7 @@ $component: '.hotel-card';
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
   }
 
   &__heading {
@@ -59,6 +88,7 @@ $component: '.hotel-card';
 
   &__actions {
     margin-top: auto;
+    margin-left: auto;
     justify-content: flex-end;
     display: flex;
     button {

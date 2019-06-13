@@ -8,8 +8,8 @@
 <div class="container">
   <div class="container__content">
     <!-- Replicated list of hotels that are styled in a skeleton-manner -->
-    <div class="hotel-skeletons" *ngIf="loading">
-      <hotel-card *ngFor="let hotel of [].constructor(3)" [hotelName]="'Lorem ipsum dolor sit amet'" [address="hotel.address"></hotel-card>
+    <div class="hotel-card-skeleton" *ngIf="loading">
+      <hotel-card *ngFor="let hotel of [].constructor(3)" [hotelName]="'Lorem ipsum dolor sit amet'" [address]="'Lorem ipsum'"></hotel-card>
     </div>
 
 

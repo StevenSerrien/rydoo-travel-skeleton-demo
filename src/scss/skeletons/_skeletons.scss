@@ -1,10 +1,10 @@
 // Skeleton Mixins
-$neutral-lightest: $sky-lighest;
+$neutral-lightest: $sky-lightest;
 
 
 
 // Buttons
-@mixin skeleton-button-styles($button: 'button') {
+@mixin skeleton-button-styles($button: '.button') {
   #{$button} {
     pointer-events: none;
     color: $neutral-lightest;
