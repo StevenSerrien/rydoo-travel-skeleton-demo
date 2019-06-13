@@ -26,11 +26,19 @@ $component: '.hotel-card';
   &__content {
     padding: 16px;
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
   }
 
   &__heading {
     color: $neutral-darkest;
     @include heading-3;
     font-weight: 700;
+  }
+
+  &__actions {
+    margin-top: auto;
+    justify-content: flex-end;
+    display: flex;
   }
 }

@@ -7,3 +7,28 @@ body {
   font-family: $font-family;
   @include body;
 }
+
+
+/** TEMPORARY STYLES FOR COMPONENTS DEFINED IN THE APPLICATION **/
+
+$button: '.button';
+
+#{$button} {
+  align-items: center;
+  border: 0 solid transparent;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 13px;
+  background-color: $brand-01;
+  width: 120px;
+  height: 2.5rem;
+  justify-content: center;
+  line-height: 1.5;
+  outline: 0;
+  padding: 0 1rem;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+}

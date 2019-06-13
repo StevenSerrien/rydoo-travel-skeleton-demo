@@ -1,0 +1,17 @@
+:host() {
+  display: flex;
+  margin-top: 8px;
+}
+
+$component: '.star';
+
+#{$component} {
+  &.active {
+    opacity: 0.3;
+  }
+
+  > svg {
+    width: 18px;
+    height: 18px;
+  }
+}
